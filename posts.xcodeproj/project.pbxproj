@@ -127,14 +127,14 @@
 			isa = PBXGroup;
 			children = (
 				7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */,
-				7E61C8E9242E94240006E843 /* PostsViewController.swift */,
-				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
+				7E5F4A61242E312F00FB98B0 /* Errors.swift */,
 				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
 				7E5F4A5F242E310C00FB98B0 /* LoginViewModel.swift */,
-				7E5F4A61242E312F00FB98B0 /* Errors.swift */,
-				7E5F4A59242E27C900FB98B0 /* RestApi.swift */,
-				7E5F4A5B242E299900FB98B0 /* URLRequestBuilder.swift */,
 				7E5F4A57242E238400FB98B0 /* Post.swift */,
+				7E61C8E9242E94240006E843 /* PostsViewController.swift */,
+				7E5F4A59242E27C900FB98B0 /* RestApi.swift */,
+				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
+				7E5F4A5B242E299900FB98B0 /* URLRequestBuilder.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
