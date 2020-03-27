@@ -23,6 +23,7 @@
 		7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */; };
 		7E5F4A6A242E3DFE00FB98B0 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */; };
 		7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */; };
+		7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFF37AA242E918C00E2EA0A /* Posts.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDataTask.swift; sourceTree = "<group>"; };
 		7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		7EFF37AA242E918C00E2EA0A /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,18 +101,9 @@
 		7E5F4A32242E169A00FB98B0 /* posts */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */,
-				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
-				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
-				7E5F4A5F242E310C00FB98B0 /* LoginViewModel.swift */,
-				7E5F4A61242E312F00FB98B0 /* Errors.swift */,
-				7E5F4A59242E27C900FB98B0 /* RestApi.swift */,
-				7E5F4A5B242E299900FB98B0 /* URLRequestBuilder.swift */,
-				7E5F4A39242E169A00FB98B0 /* Login.storyboard */,
-				7E5F4A3C242E169C00FB98B0 /* Assets.xcassets */,
-				7E5F4A3E242E169C00FB98B0 /* LaunchScreen.storyboard */,
-				7E5F4A41242E169C00FB98B0 /* Info.plist */,
-				7E5F4A57242E238400FB98B0 /* Post.swift */,
+				7EFF37AC242E919300E2EA0A /* Source */,
+				7EFF37AD242E919A00E2EA0A /* Resources */,
+				7EFF37AF242E91BE00E2EA0A /* Other */,
 			);
 			path = posts;
 			sourceTree = "<group>";
@@ -126,6 +119,40 @@
 				7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */,
 			);
 			path = postsTests;
+			sourceTree = "<group>";
+		};
+		7EFF37AC242E919300E2EA0A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */,
+				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
+				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
+				7E5F4A5F242E310C00FB98B0 /* LoginViewModel.swift */,
+				7E5F4A61242E312F00FB98B0 /* Errors.swift */,
+				7E5F4A59242E27C900FB98B0 /* RestApi.swift */,
+				7E5F4A5B242E299900FB98B0 /* URLRequestBuilder.swift */,
+				7E5F4A57242E238400FB98B0 /* Post.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7EFF37AD242E919A00E2EA0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF37AA242E918C00E2EA0A /* Posts.storyboard */,
+				7E5F4A39242E169A00FB98B0 /* Login.storyboard */,
+				7E5F4A3C242E169C00FB98B0 /* Assets.xcassets */,
+				7E5F4A3E242E169C00FB98B0 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7EFF37AF242E91BE00E2EA0A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F4A41242E169C00FB98B0 /* Info.plist */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */,
 				7E5F4A40242E169C00FB98B0 /* LaunchScreen.storyboard in Resources */,
 				7E5F4A3D242E169C00FB98B0 /* Assets.xcassets in Resources */,
 				7E5F4A3B242E169A00FB98B0 /* Login.storyboard in Resources */,
