@@ -9,7 +9,10 @@ enum TestConstants {
     static let anyError = NSError(domain: anyString, code: 0, userInfo: nil)
     static let cancelationError = NSError(domain: NSURLErrorDomain, code: NSURLErrorCancelled, userInfo: nil)
     static let anyData = Data(repeating: 1, count: 1)
-    static let anyHttpResponse200 = HTTPURLResponse(url: anyUrl, statusCode: 200, httpVersion: nil, headerFields: nil)
+    static func makeHttpResponse(_ code: Int) -> HTTPURLResponse {
+        HTTPURLResponse(url: anyUrl, statusCode: code, httpVersion: nil, headerFields: nil)!
+    }
+
     static let anyPostArrayData = """
     [{
       "userId": 1,
