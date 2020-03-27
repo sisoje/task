@@ -1,15 +1,9 @@
 import UIKit
 
-typealias LoginResult = Result<[Post], Error>
+final class LoginViewController: UIViewController {
+    var loginViewModel: LoginViewModel!
 
-class LoginViewController: UIViewController {
     @IBOutlet var textFieldUserId: UITextField!
-
-    let loginViewModel = LoginViewModel(restApi: .shared)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     @IBAction func actionLogin(_ sender: UIButton) {
         sender.isEnabled = false
@@ -40,10 +34,12 @@ extension LoginViewController {
     }
 
     private func handlePosts(_ posts: [Post]) {
-        print(posts)
+        let navigationController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let postsViewController = navigationController.viewControllers[0] as! PostsViewController
+        SceneDelegate.shared.window?.rootViewController = navigationController
     }
 
-    private func handleResult(_ result: LoginResult) {
+    private func handleResult(_ result: Result<[Post], Error>) {
         do {
             handlePosts(try result.get())
         } catch {

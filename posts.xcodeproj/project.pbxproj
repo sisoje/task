@@ -22,6 +22,7 @@
 		7E5F4A66242E377100FB98B0 /* FakeUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */; };
 		7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */; };
 		7E5F4A6A242E3DFE00FB98B0 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */; };
+		7E61C8EA242E94240006E843 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E61C8E9242E94240006E843 /* PostsViewController.swift */; };
 		7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */; };
 		7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFF37AA242E918C00E2EA0A /* Posts.storyboard */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUrlSession.swift; sourceTree = "<group>"; };
 		7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDataTask.swift; sourceTree = "<group>"; };
 		7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		7E61C8E9242E94240006E843 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		7EFF37AA242E918C00E2EA0A /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */,
+				7E61C8E9242E94240006E843 /* PostsViewController.swift */,
 				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
 				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
 				7E5F4A5F242E310C00FB98B0 /* LoginViewModel.swift */,
@@ -281,6 +284,7 @@
 				7E5F4A5A242E27C900FB98B0 /* RestApi.swift in Sources */,
 				7E5F4A38242E169A00FB98B0 /* LoginViewController.swift in Sources */,
 				7E5F4A34242E169A00FB98B0 /* AppDelegate.swift in Sources */,
+				7E61C8EA242E94240006E843 /* PostsViewController.swift in Sources */,
 				7E5F4A60242E310C00FB98B0 /* LoginViewModel.swift in Sources */,
 				7E5F4A58242E238400FB98B0 /* Post.swift in Sources */,
 				7E5F4A36242E169A00FB98B0 /* SceneDelegate.swift in Sources */,
