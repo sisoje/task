@@ -3,8 +3,17 @@ import UIKit
 final class PostsViewController: UITableViewController {
     var posts: [Post]!
 
+    @IBOutlet var favItem: UIBarButtonItem!
+    @IBOutlet var allItem: UIBarButtonItem!
+
+    @IBAction func filterAllAction() {
+        favItem.isEnabled.toggle()
+        allItem.isEnabled.toggle()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        allItem.isEnabled = false
     }
 }
 

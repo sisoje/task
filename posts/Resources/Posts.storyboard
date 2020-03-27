@@ -75,12 +75,24 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="All" id="Qqf-QM-5ag"/>
+                        <barButtonItem title="ALL" id="Qqf-QM-5ag">
+                            <connections>
+                                <action selector="filterAllAction" destination="C1g-ib-wWt" id="cxM-1L-2ei"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ENm-6N-ZMt"/>
-                        <barButtonItem title="Fav" id="vZj-RJ-a9d"/>
+                        <barButtonItem title="FAV" id="vZj-RJ-a9d">
+                            <connections>
+                                <action selector="filterAllAction" destination="C1g-ib-wWt" id="kUt-op-X0t"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Jt0-Og-UiE"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="allItem" destination="Qqf-QM-5ag" id="AFc-WZ-St1"/>
+                        <outlet property="favItem" destination="vZj-RJ-a9d" id="3In-Jz-5SV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mO-wL-H3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
