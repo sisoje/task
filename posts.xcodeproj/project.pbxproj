@@ -22,6 +22,7 @@
 		7E5F4A66242E377100FB98B0 /* FakeUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */; };
 		7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */; };
 		7E5F4A6A242E3DFE00FB98B0 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */; };
+		7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUrlSession.swift; sourceTree = "<group>"; };
 		7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeURLSessionDataTask.swift; sourceTree = "<group>"; };
 		7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */,
 				7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */,
 				7E5F4A4C242E169D00FB98B0 /* Info.plist */,
+				7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */,
 			);
 			path = postsTests;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */,
 				7E5F4A64242E372500FB98B0 /* RestApiTests.swift in Sources */,
 				7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */,
 				7E5F4A66242E377100FB98B0 /* FakeUrlSession.swift in Sources */,

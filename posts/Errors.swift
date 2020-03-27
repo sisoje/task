@@ -21,9 +21,9 @@ extension UserIdValidationError: LocalizedError {
     var errorDescription: String? {
         switch self {
             case .empty:
-                return "ID can not be empty"
+                return "Please enter ID"
             case .invalid:
-                return "ID has to be a number"
+                return "Invalid ID, it needs to be an number"
         }
     }
 }
