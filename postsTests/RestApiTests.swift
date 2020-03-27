@@ -14,25 +14,26 @@ class RestApiTests: XCTestCase {
 // MARK: - requestData() tests
 
 extension RestApiTests {
-    func testGetRequestDataInvalidRequest() {
+    func testGetRequestData_Forbidden() {
         var result: Result<Data, Error>!
         restApi.requestData(TestConstants.anyRequest) { result = $0 }
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(nil, nil, nil)
+        session.capturedCompletion(TestConstants.anyData, TestConstants.makeHttpResponse(403), nil)
         XCTAssertNotNil(result)
         do {
             _ = try result.get()
             XCTFail("this should fail")
         } catch {
             XCTAssert(error is RequestError)
+            XCTAssertEqual(error.localizedDescription, RequestError(request: session.capturedRequest, data: nil, response: nil).errorDescription)
         }
     }
 
-    func testGetRequestDataRequestError() {
+    func testGetRequestDataRequest_Error() {
         var result: Result<Data, Error>!
         restApi.requestData(TestConstants.anyRequest) { result = $0 }
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(nil, nil, TestConstants.anyError)
+        session.capturedCompletion(TestConstants.anyData, TestConstants.makeHttpResponse(200), TestConstants.anyError)
         XCTAssertNotNil(result)
         do {
             _ = try result.get()
@@ -42,19 +43,19 @@ extension RestApiTests {
         }
     }
 
-    func testGetRequestDataCancel() {
+    func testGetRequestData_Cancel() {
         var result: Result<Data, Error>!
         restApi.requestData(TestConstants.anyRequest) { result = $0 }
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(nil, nil, TestConstants.cancelationError)
+        session.capturedCompletion(TestConstants.anyData, TestConstants.makeHttpResponse(200), TestConstants.cancelationError)
         XCTAssertNil(result)
     }
 
-    func testGetRequestDataOk() {
+    func testGetRequestData_Ok() {
         var result: Result<Data, Error>!
         restApi.requestData(TestConstants.anyRequest) { result = $0 }
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(TestConstants.anyData, TestConstants.anyHttpResponse200, nil)
+        session.capturedCompletion(TestConstants.anyData, TestConstants.makeHttpResponse(200), nil)
         XCTAssertNotNil(result)
         do {
             let data = try result.get()
@@ -68,13 +69,13 @@ extension RestApiTests {
 // MARK: - getPosts() tests
 
 extension RestApiTests {
-    func testGetPostsOk() {
+    func testGetPosts_Ok() {
         var result: Result<[Post], Error>!
         restApi.getPosts(userId: TestConstants.anyUserId) { result = $0 }
         XCTAssertEqual(session.capturedRequest.httpMethod, "GET")
         XCTAssertEqual(session.capturedRequest.url?.absoluteString, "https://jsonplaceholder.typicode.com/posts?userId=\(TestConstants.anyUserId)")
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(TestConstants.anyPostArrayData, TestConstants.anyHttpResponse200, nil)
+        session.capturedCompletion(TestConstants.anyPostArrayData, TestConstants.makeHttpResponse(200), nil)
         XCTAssertNotNil(result)
         do {
             let posts = try result.get()
@@ -84,13 +85,13 @@ extension RestApiTests {
         }
     }
 
-    func testGetPostsBadData() {
+    func testGetPosts_BadData() {
         var result: Result<[Post], Error>!
         restApi.getPosts(userId: TestConstants.anyUserId) { result = $0 }
         XCTAssertEqual(session.capturedRequest.httpMethod, "GET")
         XCTAssertEqual(session.capturedRequest.url?.absoluteString, "https://jsonplaceholder.typicode.com/posts?userId=\(TestConstants.anyUserId)")
         XCTAssertTrue(session.capturedTask.resumeWasCalled)
-        session.capturedCompletion(TestConstants.anyData, TestConstants.anyHttpResponse200, nil)
+        session.capturedCompletion(TestConstants.anyData, TestConstants.makeHttpResponse(200), nil)
         XCTAssertNotNil(result)
         do {
             _ = try result.get()
