@@ -3,7 +3,9 @@ import UIKit
 final class PostsViewController: UITableViewController {
     var posts: [Post]!
 
-    override func viewDidLoad() {}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
 
 // MARK: - tableviewstuff

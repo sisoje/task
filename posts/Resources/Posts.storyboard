@@ -74,7 +74,13 @@
                             <outlet property="delegate" destination="C1g-ib-wWt" id="MdA-6L-raJ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="All" id="Qqf-QM-5ag"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ENm-6N-ZMt"/>
+                        <barButtonItem title="Fav" id="vZj-RJ-a9d"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="Jt0-Og-UiE"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mO-wL-H3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,13 +89,17 @@
         <!--Navigation Controller-->
         <scene sceneID="IbI-TK-Yr6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="teV-Bv-kJU" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="teV-Bv-kJU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQX-d9-y40">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ETA-6j-7PC">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="C1g-ib-wWt" kind="relationship" relationship="rootViewController" id="q2Q-Ef-GoD"/>
                     </connections>
