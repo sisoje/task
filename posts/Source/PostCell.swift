@@ -1,34 +1,22 @@
 import UIKit
 
-final class PostCellViewModel {
-    private var observer: Any!
-    let favoritablePost: FavoritablePost
-
-    var favChanged: ((Bool) -> Void)?
-
-    init(favoritablePost: FavoritablePost) {
-        self.favoritablePost = favoritablePost
-        self.observer = favoritablePost.observe(\.isFavorite) { [weak self] fp, _ in
-            self?.favChanged?(fp.isFavorite)
-        }
-    }
-}
-
 final class PostCell: UITableViewCell {
     @IBOutlet var postTitleLabel: UILabel!
     @IBOutlet var favButton: UIButton!
     @IBOutlet var postBodyLabel: UILabel!
 
+    private var viewModel: PostCellViewModel!
+
     @IBAction func favButtonAction() {
-        viewModel.favoritablePost.isFavorite.toggle()
+        viewModel.toggleFavorite()
     }
 
     override func prepareForReuse() {
         viewModel = nil
     }
+}
 
-    private var viewModel: PostCellViewModel!
-
+extension PostCell {
     func setup(favoritablePost: FavoritablePost) {
         postTitleLabel.text = favoritablePost.post.title
         postBodyLabel.text = favoritablePost.post.body

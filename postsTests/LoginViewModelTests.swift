@@ -4,12 +4,12 @@ import XCTest
 class LoginViewModelTests: XCTestCase {
     var session: FakeUrlSession!
     var restApi: RestApi!
-    var loginViewModel: LoginViewModel!
+    var loginViewModel: LoginInteractor!
 
     override func setUp() {
         session = FakeUrlSession()
         restApi = RestApi(session: session)
-        loginViewModel = LoginViewModel(restApi: restApi)
+        loginViewModel = LoginInteractor(restApi: restApi)
     }
 
     func testUserId_Empty() {

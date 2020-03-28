@@ -1,6 +1,6 @@
 import Foundation
 
-struct LoginViewModel {
+struct LoginInteractor {
     let restApi: RestApi
 
     func loginWithId(_ textId: String?, _ completion: @escaping (Result<[Post], Error>) -> Void) {

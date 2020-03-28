@@ -1,13 +1,13 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    var loginViewModel: LoginViewModel!
+    var loginInteractor: LoginInteractor!
 
     @IBOutlet var textFieldUserId: UITextField!
 
     @IBAction func actionLogin(_ sender: UIButton) {
         sender.isEnabled = false
-        loginViewModel.loginWithId(textFieldUserId.text) { [weak self] result in
+        loginInteractor.loginWithId(textFieldUserId.text) { [weak self] result in
             sender.isEnabled = true
             self?.handleResult(result)
         }
