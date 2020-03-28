@@ -1,7 +1,7 @@
 @testable import posts
 import XCTest
 
-class LoginViewModelTests: XCTestCase {
+class LoginInteractorTests: XCTestCase {
     var session: FakeUrlSession!
     var restApi: RestApi!
     var loginViewModel: LoginInteractor!

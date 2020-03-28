@@ -31,7 +31,7 @@
 		7EBDF5C0242F5ED90094BF32 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5BF242F5ED90094BF32 /* PostsViewModel.swift */; };
 		7EBDF5C2242F65250094BF32 /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C1242F65250094BF32 /* PostCellViewModel.swift */; };
 		7EBDF5C4242F6A7D0094BF32 /* ManagedPostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */; };
-		7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */; };
+		7EFF37A9242E5E6400E2EA0A /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */; };
 		7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFF37AA242E918C00E2EA0A /* Posts.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +75,7 @@
 		7EBDF5BF242F5ED90094BF32 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		7EBDF5C1242F65250094BF32 /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
 		7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedPostsTests.swift; sourceTree = "<group>"; };
-		7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
 		7EFF37AA242E918C00E2EA0A /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,7 +133,7 @@
 				7EBDF5B9242F5A620094BF32 /* ArraySortedTests.swift */,
 				7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */,
 				7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */,
-				7EFF37A8242E5E6400E2EA0A /* LoginViewModelTests.swift */,
+				7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */,
 				7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */,
 				7E5F4A63242E372500FB98B0 /* RestApiTests.swift */,
 				7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */,
@@ -328,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBDF5BA242F5A620094BF32 /* ArraySortedTests.swift in Sources */,
-				7EFF37A9242E5E6400E2EA0A /* LoginViewModelTests.swift in Sources */,
+				7EFF37A9242E5E6400E2EA0A /* LoginInteractorTests.swift in Sources */,
 				7E5F4A64242E372500FB98B0 /* RestApiTests.swift in Sources */,
 				7EBDF5C4242F6A7D0094BF32 /* ManagedPostsTests.swift in Sources */,
 				7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */,
