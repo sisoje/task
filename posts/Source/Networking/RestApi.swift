@@ -75,3 +75,15 @@ extension RestApi {
         return requestObject(requestBuilder.request, completion)
     }
 }
+
+// MARK: - shared
+
+extension RestApi {
+    static let shared = RestApi(
+        session: URLSession(
+            configuration: .default,
+            delegate: nil,
+            delegateQueue: .main
+        )
+    )
+}

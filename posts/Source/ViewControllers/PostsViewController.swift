@@ -45,7 +45,7 @@ extension PostsViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let post = viewModel[indexPath.row]
         let commentsViewController = UIStoryboard(name: "Comments", bundle: nil).instantiateInitialViewController() as! CommentsViewController
-        commentsViewController.favoitedPost = post
+        commentsViewController.viewModel = CommentsViewModel(restApi: .shared, favoitedPost: post)
         navigationController?.pushViewController(commentsViewController, animated: true)
     }
 }

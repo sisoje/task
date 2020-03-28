@@ -2,7 +2,9 @@ import Foundation
 
 struct LoginInteractor {
     let restApi: RestApi
+}
 
+extension LoginInteractor {
     func loginWithId(_ textId: String?, _ completion: @escaping (Result<[Post], Error>) -> Void) {
         guard let textId = textId, !textId.isEmpty else {
             completion(.failure(UserIdValidationError.empty))

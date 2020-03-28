@@ -11,15 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as! LoginViewController
-        loginViewController.loginInteractor = LoginInteractor(
-            restApi: RestApi(
-                session: URLSession(
-                    configuration: .default,
-                    delegate: nil,
-                    delegateQueue: .main
-                )
-            )
-        )
+        loginViewController.loginInteractor = LoginInteractor(restApi: .shared)
         window?.rootViewController = loginViewController
     }
 }
