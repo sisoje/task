@@ -14,46 +14,52 @@ class LoginInteractorTests: XCTestCase {
 
     func testUserId_Empty() {
         [nil, ""].forEach { userId in
-            var result: Result<[Post], Error>!
-            loginViewModel.loginWithId(userId) { result = $0 }
-            XCTAssertNotNil(result)
+            let ex = expectation(description: #function + String(describing: userId))
+            loginViewModel.loginWithId(userId) { result in
+                do {
+                    _ = try result.get()
+                } catch {
+                    XCTAssert(error is UserIdValidationError)
+                    XCTAssertEqual(error.localizedDescription, UserIdValidationError.empty.errorDescription)
+                }
+                ex.fulfill()
+            }
+        }
+        waitForExpectations(timeout: 0, handler: nil)
+    }
+
+    func testUserId_Invalid() {
+        let ex = expectation(description: #function)
+        loginViewModel.loginWithId("NAN") { result in
             do {
                 _ = try result.get()
             } catch {
                 XCTAssert(error is UserIdValidationError)
-                XCTAssertEqual(error.localizedDescription, UserIdValidationError.empty.errorDescription)
+                XCTAssertEqual(error.localizedDescription, UserIdValidationError.invalid.errorDescription)
             }
+            ex.fulfill()
         }
-    }
-
-    func testUserId_Invalid() {
-        var result: Result<[Post], Error>!
-        loginViewModel.loginWithId("NAN") { result = $0 }
-        XCTAssertNotNil(result)
-        do {
-            _ = try result.get()
-        } catch {
-            XCTAssert(error is UserIdValidationError)
-            XCTAssertEqual(error.localizedDescription, UserIdValidationError.invalid.errorDescription)
-        }
+        waitForExpectations(timeout: 0, handler: nil)
     }
 
     func testUserId_Ok() {
-        var result: Result<[Post], Error>!
-        loginViewModel.loginWithId(String(TestConstants.anyUserId)) { result = $0 }
-        session.capturedCompletion(TestConstants.anyPostArrayData, TestConstants.makeHttpResponse(200), nil)
-        XCTAssertNotNil(result)
-        do {
-            let posts = try result.get()
-            XCTAssertEqual(posts, TestConstants.anyPostsArray)
-        } catch {
-            XCTFail("should not fail")
+        let ex = expectation(description: #function)
+        loginViewModel.loginWithId(String(TestConstants.anyId)) { result in
+            do {
+                let posts = try result.get()
+                XCTAssertEqual(posts, TestConstants.anyPostsArray)
+            } catch {
+                XCTFail("should not fail")
+            }
+            ex.fulfill()
         }
+        session.capturedCompletion(TestConstants.anyPostArrayData, TestConstants.makeHttpResponse(200), nil)
+        waitForExpectations(timeout: 0, handler: nil)
     }
 
     func testUserId_Error() {
         var result: Result<[Post], Error>!
-        loginViewModel.loginWithId(String(TestConstants.anyUserId)) { result = $0 }
+        loginViewModel.loginWithId(String(TestConstants.anyId)) { result = $0 }
         session.capturedCompletion(TestConstants.anyPostArrayData, TestConstants.makeHttpResponse(403), nil)
         XCTAssertNotNil(result)
         do {
