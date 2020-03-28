@@ -13,6 +13,7 @@ final class PostsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
         allItem.isEnabled = viewModel.filterActive
         favItem.isEnabled = !viewModel.filterActive
         viewModel.addRemoveBlock = { [weak tableView] added, removed in
@@ -34,7 +35,7 @@ extension PostsViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         cell.setup(favoritablePost: viewModel[indexPath.row])
         return cell
     }

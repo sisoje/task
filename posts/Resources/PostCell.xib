@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="168" id="KGk-i7-Jjw" customClass="PostCell" customModule="posts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OZ4-9b-N6H">
+                        <rect key="frame" x="8" y="8" width="443" height="152"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A8i-V0-ROx">
+                                <rect key="frame" x="0.0" y="0.0" width="443" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-3e-tPP">
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STP-9J-IIN">
+                                        <rect key="frame" x="405" y="0.0" width="38" height="38"/>
+                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                        <state key="normal" image="star" catalog="system"/>
+                                        <state key="selected" image="star.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="favButtonAction" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jmZ-KD-ap7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-g0-ZEd">
+                                <rect key="frame" x="0.0" y="46" width="443" height="106"/>
+                                <string key="text">Label sdfdsf sdfsdfdsf sdfdsfdsf sdfdsfdsfdsf sdfdsfdsgrdgdfh gfhyth tyhrtyrt yrytrytry try! Label sdfdsf sdfsdfdsf sdfdsfdsf sdfdsfdsfdsf sdfdsfdsgrdgdfh gfhyth tyhrtyrt yrytrytry try!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OZ4-9b-N6H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="E1N-m6-Abj"/>
+                    <constraint firstItem="OZ4-9b-N6H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ivk-A0-xjo"/>
+                    <constraint firstAttribute="trailing" secondItem="OZ4-9b-N6H" secondAttribute="trailing" constant="8" id="beG-Ps-LNf"/>
+                    <constraint firstAttribute="bottom" secondItem="OZ4-9b-N6H" secondAttribute="bottom" constant="8" id="pJx-Qe-O4O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favButton" destination="STP-9J-IIN" id="WYk-V9-ue8"/>
+                <outlet property="postBodyLabel" destination="IPH-g0-ZEd" id="9WY-6N-nOM"/>
+                <outlet property="postTitleLabel" destination="HrF-3e-tPP" id="aTD-wg-a55"/>
+            </connections>
+            <point key="canvasLocation" x="250" y="200"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
