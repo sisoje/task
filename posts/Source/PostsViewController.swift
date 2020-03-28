@@ -26,7 +26,7 @@ final class PostsViewController: UITableViewController {
     }
 }
 
-// MARK: - tableviewstuff
+// MARK: - tableview stuff
 
 extension PostsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

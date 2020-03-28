@@ -4,7 +4,7 @@ struct RestApi {
     let session: URLSession
 }
 
-// MARK: - requesting raw data
+// MARK: - requesting raw data and decodable object
 
 extension RestApi {
     @discardableResult
@@ -35,9 +35,22 @@ extension RestApi {
         task.resume()
         return task
     }
+
+    @discardableResult
+    func requestObject<T: Decodable>(_ request: URLRequest, _ completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask {
+        requestData(request) { result in
+            completion(
+                result.flatMap { data in
+                    Result {
+                        try JSONDecoder().decode(T.self, from: data)
+                    }
+                }
+            )
+        }
+    }
 }
 
-// MARK: - requesting posts
+// MARK: - requesting posts and comments
 
 extension RestApi {
     static let baseUrl = URL(string: "https://jsonplaceholder.typicode.com/")!
@@ -49,14 +62,16 @@ extension RestApi {
         requestBuilder.acceptJson()
         requestBuilder.appendPathComponent("posts")
         requestBuilder.appendQuery(name: "userId", value: String(userId))
-        return requestData(requestBuilder.request) { result in
-            completion(
-                result.flatMap { data in
-                    Result {
-                        try JSONDecoder().decode([Post].self, from: data)
-                    }
-                }
-            )
-        }
+        return requestObject(requestBuilder.request, completion)
+    }
+
+    @discardableResult
+    func getComments(postId: Int, _ completion: @escaping (Result<[Comment], Error>) -> Void) -> URLSessionDataTask {
+        let requestBuilder = URLRequestBuilder(Self.baseUrl)
+        requestBuilder.GET()
+        requestBuilder.acceptJson()
+        requestBuilder.appendPathComponent("comments")
+        requestBuilder.appendQuery(name: "postId", value: String(postId))
+        return requestObject(requestBuilder.request, completion)
     }
 }
