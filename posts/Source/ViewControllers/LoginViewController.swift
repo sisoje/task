@@ -3,12 +3,15 @@ import UIKit
 final class LoginViewController: UIViewController {
     var loginInteractor: LoginInteractor!
 
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet var textFieldUserId: UITextField!
 
     @IBAction func actionLogin(_ sender: UIButton) {
         sender.isEnabled = false
+        activityIndicatorView.startAnimating()
         loginInteractor.loginWithId(textFieldUserId.text) { [weak self] result in
             sender.isEnabled = true
+            self?.activityIndicatorView.startAnimating()
             self?.handleResult(result)
         }
     }

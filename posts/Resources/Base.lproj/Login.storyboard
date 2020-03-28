@@ -48,17 +48,23 @@
                                     <constraint firstAttribute="trailing" secondItem="mZ1-B8-hjf" secondAttribute="trailing" id="8LX-tT-OnR"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="HBf-HV-WuT">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7K-Zh-CZA" secondAttribute="trailing" constant="32" id="05h-hF-h07"/>
                             <constraint firstItem="k7K-Zh-CZA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8ci-Hu-7eB"/>
+                            <constraint firstItem="HBf-HV-WuT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N2n-Zx-RjJ"/>
+                            <constraint firstItem="HBf-HV-WuT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wqa-B9-n0b"/>
                             <constraint firstItem="k7K-Zh-CZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="j5d-B6-bCT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="eP2-Dx-XLz"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="HBf-HV-WuT" id="ShX-gX-Hm5"/>
                         <outlet property="textFieldUserId" destination="Rva-p4-dJm" id="mzf-8E-4cq"/>
                     </connections>
                 </viewController>

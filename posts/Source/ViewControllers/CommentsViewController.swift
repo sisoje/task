@@ -11,13 +11,14 @@ class CommentsViewController: UITableViewController {
         tableView.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
 
+        activityIndicatorView.startAnimating()
         viewModel.getComments { [weak self] error in
+            self?.activityIndicatorView.stopAnimating()
             self?.handleError(error)
         }
     }
 
     private func handleError(_ error: Error?) {
-        activityIndicatorView.stopAnimating()
         guard let error = error else {
             tableView.reloadSections(IndexSet([1]), with: .automatic)
             return
