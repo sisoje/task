@@ -36,11 +36,16 @@ extension PostsViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
-        cell.setup(favoritablePost: viewModel[indexPath.row])
+        let post = viewModel[indexPath.row]
+        cell.setup(favoritablePost: post)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let post = viewModel[indexPath.row]
+        let commentsViewController = UIStoryboard(name: "Comments", bundle: nil).instantiateInitialViewController() as! CommentsViewController
+        commentsViewController.favoitedPost = post
+        navigationController?.pushViewController(commentsViewController, animated: true)
     }
 }

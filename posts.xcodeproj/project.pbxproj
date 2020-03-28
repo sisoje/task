@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E39E33D242F8F3400083D8B /* UserIdValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39E33C242F8F3400083D8B /* UserIdValidationError.swift */; };
+		7E39E341242F90E000083D8B /* Comments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E39E340242F90E000083D8B /* Comments.storyboard */; };
+		7E39E343242F913200083D8B /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E39E342242F913200083D8B /* CommentsViewController.swift */; };
 		7E5F4A34242E169A00FB98B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */; };
 		7E5F4A36242E169A00FB98B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */; };
 		7E5F4A38242E169A00FB98B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		7E39E33C242F8F3400083D8B /* UserIdValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdValidationError.swift; sourceTree = "<group>"; };
 		7E39E33E242F8F9600083D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = posts/Info.plist; sourceTree = SOURCE_ROOT; };
+		7E39E340242F90E000083D8B /* Comments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comments.storyboard; sourceTree = "<group>"; };
+		7E39E342242F913200083D8B /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		7E5F4A30242E169A00FB98B0 /* posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
 				7E61C8E9242E94240006E843 /* PostsViewController.swift */,
+				7E39E342242F913200083D8B /* CommentsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				7E5F4A39242E169A00FB98B0 /* Login.storyboard */,
 				7EBDF5CF242F8B810094BF32 /* PostCell.xib */,
 				7EFF37AA242E918C00E2EA0A /* Posts.storyboard */,
+				7E39E340242F90E000083D8B /* Comments.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				7EBDF5D1242F8B810094BF32 /* PostCell.xib in Resources */,
 				7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */,
 				7E5F4A40242E169C00FB98B0 /* LaunchScreen.storyboard in Resources */,
+				7E39E341242F90E000083D8B /* Comments.storyboard in Resources */,
 				7E5F4A3D242E169C00FB98B0 /* Assets.xcassets in Resources */,
 				7E5F4A3B242E169A00FB98B0 /* Login.storyboard in Resources */,
 			);
@@ -367,6 +374,7 @@
 				7E61C8EA242E94240006E843 /* PostsViewController.swift in Sources */,
 				7E5F4A60242E310C00FB98B0 /* LoginInteractor.swift in Sources */,
 				7EBDF5C0242F5ED90094BF32 /* PostsViewModel.swift in Sources */,
+				7E39E343242F913200083D8B /* CommentsViewController.swift in Sources */,
 				7EBDF5BC242F5C5D0094BF32 /* FavoritablePost.swift in Sources */,
 				7EBDF5C2242F65250094BF32 /* PostCellViewModel.swift in Sources */,
 				7E39E33D242F8F3400083D8B /* UserIdValidationError.swift in Sources */,

@@ -17,22 +17,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="APf-Ae-vnq">
-                        <rect key="frame" x="16" y="8" width="371" height="155"/>
+                        <rect key="frame" x="32" y="8" width="355" height="155"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGc-yQ-ER0">
-                                <rect key="frame" x="0.0" y="0.0" width="371" height="57.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPk-dG-4w2">
-                                <rect key="frame" x="0.0" y="65.5" width="371" height="20.5"/>
+                                <rect key="frame" x="0.0" y="65.5" width="355" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="sdf dsfdsfds fdsfds fdsfdsf dsfsdfds fdsfdsf dsfdsfds fdsfds fdsfdsfds fdsfdsfdsfdsf dsfdsfds fdsfdsfdsf dsfdsf" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3I-2U-KPG">
-                                <rect key="frame" x="0.0" y="94" width="371" height="61"/>
+                                <rect key="frame" x="0.0" y="94" width="355" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="APf-Ae-vnq" secondAttribute="trailing" constant="8" id="A95-H2-oyC"/>
-                    <constraint firstItem="APf-Ae-vnq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="G5C-UO-sDE"/>
+                    <constraint firstItem="APf-Ae-vnq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="G5C-UO-sDE"/>
                     <constraint firstItem="APf-Ae-vnq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QGT-hK-Xsd"/>
                     <constraint firstAttribute="bottom" secondItem="APf-Ae-vnq" secondAttribute="bottom" constant="8" id="eMq-kb-Ejh"/>
                 </constraints>
