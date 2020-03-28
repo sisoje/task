@@ -1,36 +1,11 @@
 import UIKit
 
-final class CommentsViewModel {
-    let restApi: RestApi
-    let favoitedPost: FavoritablePost
-    private(set) var comments: [Comment] = []
-
-    init(restApi: RestApi, favoitedPost: FavoritablePost) {
-        self.restApi = restApi
-        self.favoitedPost = favoitedPost
-    }
-
-    func getComments(_ completion: @escaping (Error?) -> Void) {
-        restApi.getComments(postId: favoitedPost.post.id) { [weak self] result in
-            self?.handleCommentsResult(result, completion)
-        }
-    }
-
-    private func handleCommentsResult(_ result: Result<[Comment], Error>, _ completion: @escaping (Error?) -> Void) {
-        do {
-            comments = try result.get()
-            completion(nil)
-        } catch {
-            completion(error)
-        }
-    }
-}
-
 class CommentsViewController: UITableViewController {
     var viewModel: CommentsViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Comments"
         tableView.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         tableView.register(UINib(nibName: "PostCell", bundle: nil), forCellReuseIdentifier: "PostCell")
 
@@ -44,19 +19,7 @@ class CommentsViewController: UITableViewController {
             tableView.reloadSections(IndexSet([1]), with: .automatic)
             return
         }
-        let alert = UIAlertController(
-            title: "Error",
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        alert.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: .cancel,
-                handler: nil
-            )
-        )
-        present(alert, animated: true, completion: nil)
+        presentError(error)
     }
 }
 

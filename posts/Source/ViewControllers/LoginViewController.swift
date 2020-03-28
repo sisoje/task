@@ -17,34 +17,15 @@ final class LoginViewController: UIViewController {
 // MARK: - result handling
 
 extension LoginViewController {
-    private func handleError(_ error: Error) {
-        let alert = UIAlertController(
-            title: "Error",
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        alert.addAction(
-            UIAlertAction(
-                title: "OK",
-                style: .cancel,
-                handler: nil
-            )
-        )
-        present(alert, animated: true, completion: nil)
-    }
-
-    private func handlePosts(_ posts: [Post]) {
-        let navigationController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController() as! UINavigationController
-        let postsViewController = navigationController.viewControllers[0] as! PostsViewController
-        postsViewController.viewModel = PostsViewModel(posts: posts)
-        SceneDelegate.shared.window?.rootViewController = navigationController
-    }
-
     private func handleResult(_ result: Result<[Post], Error>) {
         do {
-            handlePosts(try result.get())
+            let posts = try result.get()
+            let navigationController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            let postsViewController = navigationController.viewControllers[0] as! PostsViewController
+            postsViewController.viewModel = PostsViewModel(posts: posts)
+            SceneDelegate.shared.window?.rootViewController = navigationController
         } catch {
-            handleError(error)
+            presentError(error)
         }
     }
 }
