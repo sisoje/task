@@ -59,7 +59,6 @@
 
 /* Begin PBXFileReference section */
 		7E39E33C242F8F3400083D8B /* UserIdValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdValidationError.swift; sourceTree = "<group>"; };
-		7E39E33E242F8F9600083D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = posts/Info.plist; sourceTree = SOURCE_ROOT; };
 		7E39E340242F90E000083D8B /* Comments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comments.storyboard; sourceTree = "<group>"; };
 		7E39E342242F913200083D8B /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		7E5F4A30242E169A00FB98B0 /* posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +98,7 @@
 		7EBDF5CB242F88F30094BF32 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		7EBDF5CC242F88F30094BF32 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		7EBDF5CF242F8B810094BF32 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		7EBE16AF242FE298006F4EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = posts/Info.plist; sourceTree = "<group>"; };
 		7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
 		7EFF37AA242E918C00E2EA0A /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +171,6 @@
 		7E39E33B242F8EB400083D8B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				7E39E33E242F8F9600083D8B /* Info.plist */,
 				7E5F4A33242E169A00FB98B0 /* AppDelegate.swift */,
 				7E5F4A35242E169A00FB98B0 /* SceneDelegate.swift */,
 			);
@@ -182,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5F4A55242E1A3300FB98B0 /* .swiftformat */,
+				7EBE16AF242FE298006F4EF6 /* Info.plist */,
 				7E5F4A32242E169A00FB98B0 /* posts */,
 				7E5F4A49242E169D00FB98B0 /* postsTests */,
 				7E5F4A31242E169A00FB98B0 /* Products */,
@@ -209,19 +209,35 @@
 		7E5F4A49242E169D00FB98B0 /* postsTests */ = {
 			isa = PBXGroup;
 			children = (
+				7EBE16AE242FE165006F4EF6 /* Code */,
+				7EBE16AD242FE157006F4EF6 /* TestCases */,
 				7E5F4A4C242E169D00FB98B0 /* Info.plist */,
+			);
+			path = postsTests;
+			sourceTree = "<group>";
+		};
+		7EBE16AD242FE157006F4EF6 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
 				7EBDF5B9242F5A620094BF32 /* ArraySortedTests.swift */,
 				7E65B300242FCFA2001D016A /* CommentsViewModelTests.swift */,
-				7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */,
-				7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */,
 				7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */,
 				7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */,
 				7EBDF5C5242F6F3B0094BF32 /* PostCellViewModelTests.swift */,
 				7EBDF5C7242F75B90094BF32 /* PostsViewModelTests.swift */,
 				7E5F4A63242E372500FB98B0 /* RestApiTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		7EBE16AE242FE165006F4EF6 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F4A65242E377100FB98B0 /* FakeUrlSession.swift */,
+				7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */,
 				7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */,
 			);
-			path = postsTests;
+			path = Code;
 			sourceTree = "<group>";
 		};
 		7EFF37AC242E919300E2EA0A /* Source */ = {

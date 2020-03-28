@@ -3,8 +3,12 @@ import XCTest
 
 class ArraySortedTests: XCTestCase {
     func testLowerBound() {
-        let arr = [0, 1, 2]
+        let arr = [0, 2]
+        XCTAssertEqual(arr.lowerBound(of: -1), 0)
+        XCTAssertEqual(arr.lowerBound(of: 0), 0)
         XCTAssertEqual(arr.lowerBound(of: 1), 1)
+        XCTAssertEqual(arr.lowerBound(of: 2), 1)
+        XCTAssertEqual(arr.lowerBound(of: 3), 2)
     }
 
     func testInsert() {
