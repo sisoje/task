@@ -3,6 +3,8 @@ import UIKit
 class CommentsViewController: UITableViewController {
     var viewModel: CommentsViewModel!
 
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Comments"
@@ -15,6 +17,7 @@ class CommentsViewController: UITableViewController {
     }
 
     private func handleError(_ error: Error?) {
+        activityIndicatorView.stopAnimating()
         guard let error = error else {
             tableView.reloadSections(IndexSet([1]), with: .automatic)
             return
