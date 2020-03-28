@@ -31,6 +31,8 @@
 		7EBDF5C0242F5ED90094BF32 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5BF242F5ED90094BF32 /* PostsViewModel.swift */; };
 		7EBDF5C2242F65250094BF32 /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C1242F65250094BF32 /* PostCellViewModel.swift */; };
 		7EBDF5C4242F6A7D0094BF32 /* ManagedPostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */; };
+		7EBDF5C6242F6F3B0094BF32 /* PostCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C5242F6F3B0094BF32 /* PostCellViewModelTests.swift */; };
+		7EBDF5C8242F75B90094BF32 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDF5C7242F75B90094BF32 /* PostsViewModelTests.swift */; };
 		7EFF37A9242E5E6400E2EA0A /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */; };
 		7EFF37AB242E918C00E2EA0A /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFF37AA242E918C00E2EA0A /* Posts.storyboard */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,8 @@
 		7EBDF5BF242F5ED90094BF32 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		7EBDF5C1242F65250094BF32 /* PostCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
 		7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedPostsTests.swift; sourceTree = "<group>"; };
+		7EBDF5C5242F6F3B0094BF32 /* PostCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModelTests.swift; sourceTree = "<group>"; };
+		7EBDF5C7242F75B90094BF32 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
 		7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
 		7EFF37AA242E918C00E2EA0A /* Posts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Posts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +139,8 @@
 				7E5F4A67242E37B700FB98B0 /* FakeURLSessionDataTask.swift */,
 				7EFF37A8242E5E6400E2EA0A /* LoginInteractorTests.swift */,
 				7EBDF5C3242F6A7D0094BF32 /* ManagedPostsTests.swift */,
+				7EBDF5C5242F6F3B0094BF32 /* PostCellViewModelTests.swift */,
+				7EBDF5C7242F75B90094BF32 /* PostsViewModelTests.swift */,
 				7E5F4A63242E372500FB98B0 /* RestApiTests.swift */,
 				7E5F4A69242E3DFE00FB98B0 /* TestConstants.swift */,
 			);
@@ -148,8 +154,8 @@
 				7EBDF5B7242EC6190094BF32 /* Array+Sorted.swift */,
 				7E5F4A61242E312F00FB98B0 /* Errors.swift */,
 				7EBDF5BB242F5C5D0094BF32 /* FavoritablePost.swift */,
-				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
 				7E5F4A5F242E310C00FB98B0 /* LoginInteractor.swift */,
+				7E5F4A37242E169A00FB98B0 /* LoginViewController.swift */,
 				7EBDF5BD242F5C7A0094BF32 /* ManagedPosts.swift */,
 				7E5F4A57242E238400FB98B0 /* Post.swift */,
 				7E61C8EB242EABB90006E843 /* PostCell.swift */,
@@ -331,7 +337,9 @@
 				7EFF37A9242E5E6400E2EA0A /* LoginInteractorTests.swift in Sources */,
 				7E5F4A64242E372500FB98B0 /* RestApiTests.swift in Sources */,
 				7EBDF5C4242F6A7D0094BF32 /* ManagedPostsTests.swift in Sources */,
+				7EBDF5C6242F6F3B0094BF32 /* PostCellViewModelTests.swift in Sources */,
 				7E5F4A68242E37B700FB98B0 /* FakeURLSessionDataTask.swift in Sources */,
+				7EBDF5C8242F75B90094BF32 /* PostsViewModelTests.swift in Sources */,
 				7E5F4A66242E377100FB98B0 /* FakeUrlSession.swift in Sources */,
 				7E5F4A6A242E3DFE00FB98B0 /* TestConstants.swift in Sources */,
 			);
