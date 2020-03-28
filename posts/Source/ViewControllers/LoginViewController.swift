@@ -11,7 +11,7 @@ final class LoginViewController: UIViewController {
         activityIndicatorView.startAnimating()
         loginInteractor.loginWithId(textFieldUserId.text) { [weak self] result in
             sender.isEnabled = true
-            self?.activityIndicatorView.startAnimating()
+            self?.activityIndicatorView.stopAnimating()
             self?.handleResult(result)
         }
     }

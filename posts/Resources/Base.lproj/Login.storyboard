@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="k7K-Zh-CZA">
-                                <rect key="frame" x="32" y="406.5" width="350" height="83"/>
+                                <rect key="frame" x="32" y="272" width="350" height="83"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mZ1-B8-hjf">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -55,7 +55,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7K-Zh-CZA" secondAttribute="trailing" constant="32" id="05h-hF-h07"/>
-                            <constraint firstItem="k7K-Zh-CZA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8ci-Hu-7eB"/>
+                            <constraint firstItem="k7K-Zh-CZA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="8ci-Hu-7eB"/>
                             <constraint firstItem="HBf-HV-WuT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N2n-Zx-RjJ"/>
                             <constraint firstItem="HBf-HV-WuT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wqa-B9-n0b"/>
                             <constraint firstItem="k7K-Zh-CZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="j5d-B6-bCT"/>
