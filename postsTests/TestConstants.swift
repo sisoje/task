@@ -15,10 +15,14 @@ enum TestConstants {
 
     static let anyPostArrayData = """
     [{
-      "userId": 1,
       "id": 1,
-      "title": "title",
-      "body": "body"
+      "title": "title1",
+      "body": "body1"
+    },
+    {
+      "id": 2,
+      "title": "title2",
+      "body": "body2"
     }]
     """.data(using: .utf8)!
     static let anyPostsArray = try! JSONDecoder().decode([Post].self, from: anyPostArrayData)
