@@ -17,6 +17,10 @@ final class PostsViewModel {
 }
 
 extension PostsViewModel {
+    convenience init(posts: [Post]) {
+        self.init(managedPosts: ManagedPosts(posts: posts))
+    }
+
     func toggleFilter() {
         filterActive.toggle()
         let diff = managedPosts.calcDiff()

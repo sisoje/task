@@ -36,7 +36,7 @@ extension LoginViewController {
     private func handlePosts(_ posts: [Post]) {
         let navigationController = UIStoryboard(name: "Posts", bundle: nil).instantiateInitialViewController() as! UINavigationController
         let postsViewController = navigationController.viewControllers[0] as! PostsViewController
-        postsViewController.viewModel = PostsViewModel(managedPosts: ManagedPosts(posts: posts))
+        postsViewController.viewModel = PostsViewModel(posts: posts)
         SceneDelegate.shared.window?.rootViewController = navigationController
     }
 
